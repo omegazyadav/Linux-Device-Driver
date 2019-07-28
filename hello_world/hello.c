@@ -6,13 +6,13 @@ MODULE_LICENSE("GPL");
 MODULE_AUTHOR("omegazyadav");
 
 
-static int __init hello_init(void)
+int __init hello_init(void)
 {
     printk(KERN_INFO "Hello world!\n");
     return 0;    // Non-zero return means that the module couldn't be loaded.
 }
 
-static void __exit hello_cleanup(void)
+void __exit hello_cleanup(void)
 {
     printk(KERN_INFO "Cleaning up module.\n");
 }
