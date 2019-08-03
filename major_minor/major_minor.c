@@ -31,7 +31,7 @@ struct file_operations major_minor_operation={
 //
 };
 
-
+MODULE_LICENSE("GPL");
 
 int scull_simple_module_init(void){
 	printk(KERN_ALERT"Hello world");
