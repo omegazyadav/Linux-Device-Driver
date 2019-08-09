@@ -1,0 +1,1 @@
+cmd_/home/omega/Documents/LDD/major_minor/major_minor.ko := ld -r -m elf_x86_64  -z max-page-size=0x200000 -T ./scripts/module-common.lds  --build-id  -o /home/omega/Documents/LDD/major_minor/major_minor.ko /home/omega/Documents/LDD/major_minor/major_minor.o /home/omega/Documents/LDD/major_minor/major_minor.mod.o ;  true
