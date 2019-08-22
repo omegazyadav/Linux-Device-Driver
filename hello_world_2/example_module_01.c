@@ -2,8 +2,8 @@
 #include <linux/kernel.h>    
 #include <linux/init.h>      
 
-//MODULE_LICENSE("GPL");
-//MODULE_AUTHOR("omegazyadav");
+MODULE_LICENSE("GPL");
+MODULE_AUTHOR("omegazyadav");
 
 
 int __init  hello_init(void)
