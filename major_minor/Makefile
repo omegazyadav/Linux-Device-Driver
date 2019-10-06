@@ -1,6 +1,5 @@
 
-
-obj-m := major_minor.o
+obj-m := assigin_major_minor.o
 
 
 all:
