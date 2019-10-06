@@ -1,3 +1,8 @@
+/*
+ *This is the static way of assigning the major and minor number 
+ * in character device driver. 
+ */
+
 #include<linux/kernel.h>
 #include<linux/init.h>
 #include<linux/module.h>
@@ -11,7 +16,14 @@ static int __init hello_world_init(void)
         /*Allocating Major number*/
 
 	static int maj;
-	maj=alloc_chrdev_region(&dev,1,6,"omega_dev");
+
+	/*	
+	 *
+	 *The frist parameter of register_chardev_region is the minor number
+	 * since the compiler automatically assign the major number to 0.
+	 */
+	
+	maj=register_chrdev_region(dev,4,"omega_dev");
         if(maj <0){
                 printk(KERN_INFO "Cannot allocate major number for device 1\n");
                 return -1;
