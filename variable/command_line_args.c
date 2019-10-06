@@ -34,7 +34,7 @@ static int __init hello_module(void){
 	printk(KERN_INFO "Hello, World\n");
 	printk(KERN_INFO "Value of Integer:%d\n",my_int );
 	printk(KERN_INFO "Value of character array: %s\n",arr);
-	printk(KERN_INFO "Value of long integer:%ld",my_long);
+	printk(KERN_INFO "Value of long integer:%ld\n",my_long);
 	
 	return 0;
 
@@ -43,7 +43,7 @@ static int __init hello_module(void){
 
 static void __exit exit_module(void){
 
-	printk(KERN_INFO "Goodbye!");
+	printk(KERN_INFO "Goodbye! \n");
 }
 
 

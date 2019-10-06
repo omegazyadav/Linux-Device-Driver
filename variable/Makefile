@@ -1,6 +1,6 @@
 
 
-obj-m:=command_line_args.o
+obj-m:=hello_world.o
 
 
 all:
