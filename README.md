@@ -1,5 +1,8 @@
 #Linux Device Driver -GKH
 
+When you are writing a krenel module then never forget to append next line character in KERN_INFO otherwise 
+insmod and rmmod may show unusual behaviour.<br>
+
 
 Different Data Types in Linux Kernel:
 Depending upon the different architecture different data types are available in linux kernel. 
