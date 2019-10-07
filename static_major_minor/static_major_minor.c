@@ -9,7 +9,7 @@
 #include <linux/kdev_t.h>
 #include <linux/fs.h>
  
-static dev_t dev = 1;
+static dev_t dev=1 ;
  
 static int __init hello_world_init(void)
 {
@@ -23,7 +23,7 @@ static int __init hello_world_init(void)
 	 * since the compiler automatically assign the major number to 0.
 	 */
 	
-	maj=register_chrdev_region(dev,4,"omega_dev");
+	maj=register_chrdev_region(dev,1,"omega_dev");
         if(maj <0){
                 printk(KERN_INFO "Cannot allocate major number for device 1\n");
                 return -1;
@@ -35,7 +35,7 @@ static int __init hello_world_init(void)
  
 void __exit hello_world_exit(void)
 {
- 	unregister_chrdev_region(dev, 6);
+ 	unregister_chrdev_region(dev, 1);
 	printk(KERN_INFO "Kernel Module Removed Successfully...\n");
 }
  

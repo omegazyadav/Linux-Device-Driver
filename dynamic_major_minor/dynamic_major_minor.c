@@ -13,13 +13,12 @@
 #include <linux/fs.h>
 /*This is already u32 type defined so no need to delcare as unsigned value*/
 
-static dev_t dev=10;
-
+static dev_t dev;
 
 static int __init hello_world_init(void){
 
 	static int maj;
-	maj=alloc_chrdev_region(&dev,10,15,"omega_device");
+	maj=alloc_chrdev_region(&dev,112,15,"omega_device");
 
 	if (maj<0){
 		printk(KERN_INFO "Major and Minor number cannot be assigned!\n");
@@ -35,7 +34,7 @@ static int __init hello_world_init(void){
 
 
 void __exit hello_world_exit(void){
-	unregister_chrdev_region(dev,10);
+	unregister_chrdev_region(112,15);
 	printk(KERN_INFO "The kernel module is removed successfully !\n");
 	
 }
